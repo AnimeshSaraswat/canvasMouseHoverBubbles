@@ -124,7 +124,7 @@ function Circle(x, y, dx, dy, radius) {
 // Begning of circle animation
 
 var circleArray = [];
-for(let i = 0; i < 500; i++) {
+for(let i = 0; i < 700; i++) {
 	let radius = Math.random() * 3 + 2;
 	let x = Math.random() * (innerWidth - radius * 2) + radius;
 	let y = Math.random() * (innerHeight - radius * 2) + radius;

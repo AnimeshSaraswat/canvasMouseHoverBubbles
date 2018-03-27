@@ -5,17 +5,42 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Canvas Resize</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 	<style type="text/css">
 		body {
 			margin: 0px;
+			font-family: 'Roboto', sans-serif;
+		}
+		.canvas-overlay {
+			position: relative;
 		}
 		canvas {
-			border: 1px solid black;
+			border: 1px solid #eee;
+		}
+		.the-overlay-section {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: rgba(0, 0, 0, 0.4);
+		}
+		.the-overlay-section h1 {
+			color: #fff;
+			font-size: 2.5rem;
 		}
 	</style>
 </head>
 <body>
-	<canvas></canvas>
+	<div class="canvas-overlay">
+		<canvas></canvas>
+		<div class="the-overlay-section">
+			<h1>Welcome To The Canvas</h1>
+		</div>
+	</div>
 	<script src="canvas.js"></script>
 </body>
 </html>
