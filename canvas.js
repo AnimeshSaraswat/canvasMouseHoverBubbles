@@ -60,14 +60,12 @@ var mouse = {
 let maxRadius = 40;
 
 var colorArray = [
-	'#fff',
-	'red',
-	'#eee',
-	'#000',
-	'#50e86b',
-	'#51b9d0',
-	'#FCE95F',
-	'#3F52AE'
+	'#54BAD8',
+	'#F7DC1B',
+	'#E7312F',
+	'#FFFFFF',
+	'#0D1A26',
+	'#192C47'
 ];
 
 window.addEventListener('mousemove', function(event) {
@@ -110,7 +108,7 @@ function Circle(x, y, dx, dy, radius) {
 		// interactivity with the bubbles
 		if (mouse.x - this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y <50 && mouse.y - this.y >-50) {
 			if(this.radius < maxRadius) {
-				this.radius += 1;
+				this.radius += 6;
 			}
 		} else if(this.radius > this.minRadius) {
 			this.radius -= 1; 
@@ -124,7 +122,7 @@ function Circle(x, y, dx, dy, radius) {
 // Begning of circle animation
 
 var circleArray = [];
-for(let i = 0; i < 700; i++) {
+for(let i = 0; i < 1200; i++) {
 	let radius = Math.random() * 3 + 2;
 	let x = Math.random() * (innerWidth - radius * 2) + radius;
 	let y = Math.random() * (innerHeight - radius * 2) + radius;
